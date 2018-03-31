@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function exportEmp() {
+
+		window.location.href = 'exportExcel';
+
+	}
+
+	function exportExcelTemplet() {
+		window.location.href = 'exportExcelTemplet';
+	}
+</script>
+</head>
+<body>
+	<button onclick="exportEmp()">下载emp</button>
+	<button onclick="exportExcelTemplet()">下载模板emp</button>
+
+</body>
+</html>

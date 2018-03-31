@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzit.dao.EmpMapper">
+
+	<!-- 查询 -->
+	<select id="getEmpList" resultType="Emp">
+		select * from emp
+	</select>
+
+	<!-- 添加 -->
+	<insert id="saveEmp" parameterType="Emp">
+		insert into
+		emp(ename,job,mgr,hireDate,sal,deptno)
+		values
+		<foreach collection="list" separator="," item="item">
+			(#{item.ename},#{item.job},#{item.mgr},#{item.hireDate},#{item.sal},#{item.deptno})
+		</foreach>
+
+	</insert>
+
+</mapper>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function exportEmp() {
+
+		window.location.href = 'exportExcel';
+
+	}
+
+	function exportExcelTemplet() {
+		window.location.href = 'exportExcelTemplet';
+	}
+
+	function downloadTemplet() {
+		window.location.href = 'downloadTemplet';
+	}
+</script>
+</head>
+<body>
+	<button onclick="exportEmp()">下载emp</button>
+	<button onclick="exportExcelTemplet()">下载模板emp</button>
+
+	<hr />
+	<button onclick="downloadTemplet()">下载批量导入模板</button>
+
+
+	<form action="uploadEmp" method="post" enctype="multipart/form-data">
+		请选择文件:<input type="file" name="file"> <br/><input type="submit"
+			value="添加">
+	</form>
+
+
+</body>
+</html>
